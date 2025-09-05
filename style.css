@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #86BBD8;
+}
+
+.cabecalho{
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #353434;
+  width: 100%;
+  height: 50px;
+}
+
+.barra {
+  height: 3px;
+  background-color: rgb(253, 253, 253);
+  width: 30px;
+  margin-right: 10px;
+  border-radius: 5px;
+  transition: .5s all;
+}
+
+#hamenu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  
+}
+
+.links {
+  position: fixed;
+  top: 50px;
+  background-color: #33658a;
+  width: 140px;
+  height: 100%;
+  padding: 20px;
+  right: -200%;
+  transition: right 0.5s ease;
+  
+}
+
+.links ul {
+  list-style: none;
+}
+
+.links a {
+  text-decoration: none;
+  color: aliceblue;
+  display: block;
+  padding: 4px;
+  transition: background 0.3s ease, color 0,3s ease;
+}
+
+.links a:hover {
+  background-color: #353434;
+}
+
+.links a:active {
+ background-color: #86BBD8;
+}
+
+.on {
+  right: 0 !important;
+  transition: 0.5s;
+}
+
+.clicado {
+  background-color: rgb(211, 3, 3) !important;
+  transition: 0.5s;
+}
+
+.clicado:nth-child(2){
+  opacity: 0;
+}
+
+.clicado:nth-child(1){
+  position: absolute;
+  transform: rotate(50deg);
+}
+
+.clicado:nth-child(3){
+  position: absolute;
+  transform: rotate(-50deg);
+}
+
+.title {
+  padding-top: 60px;
+  margin: 10px;
+  color: aliceblue;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.title h1 {
+  background-color: aliceblue;
+}
+
+.sobre-mim{
+  color: aliceblue;
+  text-align: justify;
+  margin: 55px;
+  font-family: Arial, sans-serif;
+}
+
+.texto h2 {
+  text-align: center;
+  margin: 10px;
+}
+
+.foto {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 25px auto;
+  border-radius: 12px;
+}
+
+.projetos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  color: aliceblue;
+  text-decoration: none;
+  font-family: Arial, sans-serif;;
+}
+
+#meus-projetos h2 {
+  color: aliceblue;
+  text-align: center;
+}
+
+.card {
+  background-color: #33658a;
+  border-radius: 12px;
+  width: 280px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: Arial, sans-serif;
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0 5px 0;
+  text-align: center;
+}
+
+.card p {
+  font-size: 0.95rem;
+  padding: 0 15px;
+  margin-bottom: 15px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.card a {
+  align-self: center;
+  margin-bottom: 20px;
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.card a:hover {
+  background-color: #0077b5;
+  border-color: #0077b5;
+}
+
+.projetos h2 {
+  margin: 15px;
+}
+
+.projetos a {
+  text-decoration: none;
+  margin-top: 20px;
+  color: aliceblue;
+  font-size: 1rem;
+  padding: 8px 14px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.projetos a:hover {
+   color: rgb(255, 255, 255);
+  background-color: #0077b5;
+  border-color: #0077b5;
+}
+
+
+
+.contato {
+  text-align: center;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.contato h2 {
+font-size: 1.5rem;
+margin-bottom: 10px;
+color: aliceblue;
+}
+
+.contato .redes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contato .redes a {
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 1rem;
+  padding: 8px 14px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.contato .redes a:hover {
+  color: rgb(255, 255, 255);
+  background-color: #0077b5;
+  border-color: #0077b5;
+}
+
+.on {
+  transform: translateX(0);
+}
+
+@media screen and (min-width: 650px){
+  #sobre{
+  display: flex;
+  flex-direction: row;
+  padding: 0 50px;
+}
+
+.links{
+  top: 47px;
+}
+
+.text-main {
+  width: 50%;
+  padding: 0px 50px;
+}
+
+.sobre-mim {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sobre-mim .texto {
+  flex: 1;
+}
+
+.sobre-mim .foto {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+}
+
+body{
+  height: 100%;
+}
+
+.cabecalho{
+  height: 5%;
+  display: none;
+}
+
+main{
+  flex: 1;
+}
+
+.contato{
+  padding: 20px 0;
+}
+}
